@@ -59,7 +59,7 @@ def compute_check(name):
   
   # This check requires the top five most frequent letters. Here I'll find at
   # least five letters, and make sure I return only 5. (There will only be more
-  # than five in the case of a tie.
+  # than five in the case of a tie.)
   topChars = []
   while len(topChars) < 5:
     # Find the next most common letter
