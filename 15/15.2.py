@@ -17,9 +17,7 @@ while True:
 	positions = []
 	
 	for i in range(len(discs)):
-		positions.append((discs[i]["start"] + i + pressTime + 1) % discs[i]["total"]) # Plus 1 because it takes a second to reac hthe first disc
-	
-	#raw_input("Time: {} \t Positions: {}".format(pressTime, positions))
+		positions.append((discs[i]["start"] + i + pressTime + 1) % discs[i]["total"])
 	
 	if positions == [0] * len(discs):
 		break
@@ -27,5 +25,3 @@ while True:
 		pressTime += 1
 	
 print(pressTime)
-
-# 121835 is too high
