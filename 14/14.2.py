@@ -1,8 +1,7 @@
 from hashlib import md5
 
 # A few globals
-salt = "abc"
-#salt = "ngcjuoqr" # My program input
+salt = "ngcjuoqr" # My program input
 cache = {}
 
 
@@ -57,8 +56,7 @@ def consec(text, n, specificChar = None):
 
 
 ################# Main Program ########################
-print(md5(0))
-'''
+
 nonce = 0
 keys = []
 
@@ -88,6 +86,6 @@ while len(keys) < 64:
 # Print the final result
   
 print("Last useful index: {}".format(nonce - 1)) # -1 to undo the last increment
-'''
+
 
 
