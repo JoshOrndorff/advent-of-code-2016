@@ -63,7 +63,7 @@ def print_board(current):
 
 ############ Main Program #########
 
-# Keep searching until we find a path (which will certainly be shortest) to goal
+# Keep searching until no more paths are yet to be explored
 while len(openSet) > 0:
 
   # Grab the most promising unexplored node for next time through the loop
