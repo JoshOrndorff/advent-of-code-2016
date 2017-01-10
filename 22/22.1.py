@@ -19,7 +19,6 @@ print("Total number of pairs: {}".format(n * (n - 1) / 2))
 numViable = 0
 for a in nodes:
   
-  #print("Current a node: {}".format(str(a)))
   # If a is empty the pair is not vialbe
   if a[1] == 0:
     print("Rejecting a as empty. " + str(a))
@@ -37,6 +36,3 @@ for a in nodes:
 
 # Print the final result
 print(numViable)
-
-# 1854 is too high # Got this when I was parsing names incorrectly
-# 1911 is probably also too high, right?
