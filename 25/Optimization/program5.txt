@@ -1,0 +1,30 @@
+d = a + 365 * 7 // D is never changed again
+
+
+
+while(true){
+  a = d
+  while(a != 0){
+    b = a
+    a = 0
+    c = 2
+    while (b != 0){  // This whole loop is integer dividing a by 2
+      b--
+      c--
+      if (c == 0){
+        c = 2
+      }
+      else{
+        a++      // so a only gets incremented every other time
+      }          // a /= 2, c left at 2 if a was even, 1 if a was odd
+    }
+
+    b = 2            // Lines 21 - 26: if c==2, b=0 elif c==1, b=1
+    while (c != 0){
+      b--
+      c--
+    }
+    label D: NOP
+    out b
+  }
+}

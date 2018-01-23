@@ -1,0 +1,12 @@
+d = a + 365 * 7 // D is never changed again
+
+
+
+while(true){
+  a = d
+  while(a != 0){
+    b = a % 2
+    a = a / 2
+    out b
+  }
+}

@@ -1,0 +1,30 @@
+d = a
+c = 7
+b = 365
+d += b
+
+c--
+jnz c -5 // repeats lines 3 - 7, 7 times (because c starts at 7)
+         // ultimately d is initialized to answer + 365*7
+label A: a = d   // The ultimate start of the program after initialization
+label B: NOP
+b = a
+a = 0
+c = 2
+if (b == 0) goto line 21
+
+b--
+c--
+jnz c -4 // if c!=0 goto line 14 (c was always started at 2)
+a++      // so a only gets incremented every other time
+jnz 1 -7 // unconditional goto line 13
+label C: b = 2
+jnz c 2 // if c!=0 do lines 24 - 26 (Tests whether c was left at 1 or 0)
+jnz 1 4 // else goto D (line 27)
+b--
+c--
+unconditional goto line 22
+label D: NOP
+out b
+jnz a -19 // if a!=0 goto B (line 10)
+jnz 1 -21 // unconditional goto A (line 9)

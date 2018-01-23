@@ -1,0 +1,30 @@
+d = a
+c = 7
+b = 365
+d++
+b--
+jnz b -2 // if b!=0 goto the d++ line // lines 4-6 are d += b
+c--
+jnz c -5 // if c!=0 goto  b = 365
+label A: a = d
+label B: jnz 0 0 // just a nop, right?
+b = a
+a = 0
+c = 2
+jnz b 2 // if b!=0 continue at line 16
+jnz 1 6 // else goto C (line 21)
+dec b
+dec c
+jnz c -4
+inc a
+jnz 1 -7
+label C: cpy 2 b
+jnz c 2 // if c!=0 do lines 24 - 26
+jnz 1 4 // else goto D (line 27)
+dec b
+dec c
+jnz 1 -4
+label D: jnz 0 0 // just a nop
+out b
+jnz a -19 if a!=0 goto B (line 10)
+jnz 1 -21 unconditional goto A (line 9)
